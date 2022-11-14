@@ -1,0 +1,54 @@
+/* como importar un font personalizado :
+   1.-Entra a GOOGLE FONT 
+   2.- ELIGE un estilo 
+   3. - descargalo y guardalo en la carpeta de tu proyecto*/
+
+@font-face {    /*esto sirve para importar una fuente personalizada*/
+    font-family: potttaOne;   /*aqui le dimos un  nombre a nuestra fuente personalizada*/
+    src: url(fonts/Potta_One/PottaOne-Regular.ttf);  /*esto es para ubicar la fuente*/
+}
+
+
+
+h1{
+   /* font-family: Arial, Helvetica, sans-serif; */
+    font-style: italic;  /*ESTILO DE FUENTE*/
+    font-family: 'Potta One', cursive; /*Estilo de la FUENTE Personalizada que descargamos Y CURSIVA*/
+    text-transform: uppercase;  /*ME TRANSFORMA A MAYUSCULAS*/
+    font-size: 45px; /*TAMA;O DE FUENTE*/
+
+    /*Colores */    
+    /*En Css Puedes seleccionar de diferentes formas los colores */
+
+    /*Colores del sistema */
+
+    color: saddlebrown;
+
+    /*Colores hexadecimales*/
+
+    color: #5d8b21;
+
+    /*Colores RGB */
+
+      color: rgb(19, 94, 168);
+
+    /*Colores RGBA */
+
+     color: rgba(42, 87, 133, 0.8);
+
+     /*google picker buena opcion para captura de colores*/
+}
+
+h3{
+    font-family: potttaOne; /*estilo de fuente importado*/
+    font-size: 25px; /*tama;o de letra*/
+    font-weight: lighter; /*peso de la letra*/
+
+}
+
+p{
+    font-family: 'Bebas Neue', cursive;  /*estilo de fuente direccionado de la pagina google font*/
+    font-size: 18px; /*tama;o del texto*/
+    font-weight: bold; /*peso de la fuente*/
+}
+

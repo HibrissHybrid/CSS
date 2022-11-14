@@ -1,0 +1,133 @@
+/* body{             esto toma todos los elementos y todo el body
+  background: gray;
+}
+h1{
+    color: red;
+    font-size: 50px;
+    text-decoration: underline;
+}   */
+
+/* selector universal */
+
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;   /*esto es un estilo de funte a la letra */
+    
+}
+/* selector de etiqueta */
+
+h1{
+    background: red;  /*esto es un color exterior de la caja o de tal elemento*/
+    color: seashell;  /*esto le da color a la funte del texto*/
+    padding: 10px; /*margen de la caja en h1*/
+
+}
+
+a{
+    font-size: 18px; /*font size es para darle un tama;o a la letra*/
+    color: green;  /*color a la letra*/
+    text-decoration: none;  /*ninguna decoracion al texto*/
+
+}
+
+footer{    /*Estos son los estilos del pie de pagina */
+    color: black;  /*color del footer*/
+    text-align: center;  /*texto centrado del footer*/
+
+}
+
+
+/* selector de id    */    
+
+/*el selector id cita el estilo dentro de un elemento y se cita con un almuadilla, gato, hashtag*/
+
+#descripcion,  
+#title{
+
+    border: 5px solid black;  /*border crea el marco de una caja tama;o: px , forma, color*/
+    padding: 15px; /* margen interior */ 
+    
+}
+#titulo{
+
+    background: blue;  /*color de la caja*/
+    border: 2px dashed white;  /* dashed es un borde puntiado solid es un borde solido */ 
+}
+
+/* selector de clase */
+/* el selecto clase es para estilos individuales de elementos y pueden ser varios y id solo para un elemento   y se citan con un puinto (.) */
+
+.parrafo1{
+
+    font-style: italic;  /*estilo de la fuente*/
+    /* text-decoration: underline;    hace una linia debajo del texto*/
+    font-weight: bold; /*peso de la fuente bold hace mas gorda la fuente*/
+
+}
+.parrafo2, .parrafo1{
+
+    background-color: green;  /*color detras del texto en este caso es verde*/
+    color:white; /*color de la letra*/
+    padding: 10px;  /*crea margen interior de la "caja" del texto*/
+
+}
+.parrafo3{
+    background-color: orange; /*color detras del texto en este caso es orange*/
+    color: black; /*color del texto*/
+}
+
+/* selector de atributo */
+
+#usuario form{
+
+    border: 5px solid blue;
+    margin-top: 15px;  /*marden de arriba*/
+    margin-bottom: 15px; /*margen de abajo*/
+    padding: 20px; /*margen interior*/
+    
+}
+
+#usuario form *{
+
+    display: block; /*acomoda el contenido de mis cajas en tipo bloque*/
+
+}
+
+input[type="text"]{     /*estilos de la caja de texto*/
+
+    margin-bottom: 15px; /*margen de abajo*/
+    padding: 5px; /*margen interior de la caja de texto*/
+    width: 300px /*tama;o ancho de la caja de texto*/
+    ;
+
+}
+
+input[type="submit"]{  /*estilos de el boton de enviar*/
+
+    background: green; /*color de la caja enviar*/
+    color: white; /*color de letra*/
+    padding: 15px;  /*margen interior de la caja*/
+    font-size: 15px; /*tama;o de fuente*/
+    text-transform: uppercase; /*uppercase hace que tu texto sea en MAYUSCULAS*/
+    border: 1px solid black; /*Borde de la caja enviar*/
+    cursor: pointer; /*al poner el cursor encima de la caja el cursor cambia su estilo para presionar el boton*/
+
+}
+
+/*Selectores Hijos */
+/*este selecciona sub elementos especifico*/
+
+#menu > li > a{
+    font-size: 18px;
+    color: red;
+    text-decoration: none;
+}
+
+ /*PRIORIDAD   le da prioridad al codigo*/
+#saludo h1{
+    background: brown;
+}
+
+h1{
+    background: purple !important;
+
+}

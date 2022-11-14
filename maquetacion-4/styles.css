@@ -1,0 +1,260 @@
+*{
+    text-decoration: none;
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+}
+
+#container{
+    width: 90%;
+    height: auto;
+    margin: 0px auto;
+    border: 1px solid rgba(225, 225, 226, 0.8);
+    box-shadow: 0px 0px 10px #ccc;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    min-height: 600px;
+}
+
+#header{
+    display: grid;
+    grid-template-columns: 68% 30%;
+    align-items: center;
+
+
+    width: 100%;
+    height: 120px; 
+    border-bottom: 1px solid rgba(225, 225, 226, 0.8); /*aqui creamos un borde en la parte de abajo para crear divicion entre el header y el contenido*/
+    
+}
+
+.logo{
+   
+
+    font-family: Helvetica; /*letra*/
+    font-style: italic; /*estilo*/
+    font-weight: 900;
+    font-size: 35px; /*size font logo*/
+
+    padding: 10px; /*margen interio*/
+    margin-left: 20px; /*para que no este tan pegado al container*/
+    color: black; /*color*/
+    text-shadow: 1px 1px 0px #ccc; /*sombra al logo*/
+    text-transform: uppercase; /*aqui convierte el texto a mayusculas*/
+    
+}
+
+.logo h1{
+
+    font-family: Helvetica; /*letra*/
+    font-style: italic; /*estilo*/
+    font-weight: 900;
+    font-size: 35px; /*size font logo*/
+}
+
+#menu{  /*ajustamos menu*/
+    width: 100%;
+   
+    height: 100%;
+    padding-right: 20px;
+}
+
+#menu > ul{  /*ajuste del menu*/
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /*4 elementos del menu de una fraccion*/
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    height: 100%;
+    list-style: none;
+}
+
+#menu a{  /*aqui le damos estilos a los elementos del menu */
+    text-transform: uppercase;
+    color: #444;
+    padding: 15px;
+    transition: all 300ms;
+
+}
+
+#menu a:hover{  /*cuando pase cursor por encima de cada elemento este dara un estilo*/
+    background: #ccc;  
+    color: white;
+}
+
+/*contenido*/
+
+#content{
+    display: grid;
+    grid-template-columns: 20% 1fr;
+    align-items: start;
+    justify-items: space-between;
+    grid-column-gap: 7px;
+    
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#proyects{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 255px);  /*auto fill  crea las filas que nececsita*/
+    grid-gap: 20px;
+    align-items: start;
+    
+}
+
+.proyect{
+    
+    margin-bottom: 25px;
+    margin-right: 20px; /*para que se separe cada elemento*/
+    border: 1px solid #ccc;
+}
+
+.proyect img{
+    width: 100%;
+}
+
+.proyect-info a{
+    font-size: 16px;
+    color: black;
+    transition: all 300ms;
+
+}
+
+.proyect-info a:hover{
+    color: green;
+}
+
+.proyect-info p{
+    font-size: 16px;
+    color: gray;
+}
+
+/*barra lateral*/
+#aside{
+    
+    margin-right: 30px;
+    padding: 15px;   
+}
+
+#aside h2{  /*estilos a los eslementos del aside (barra lateral)*/
+    display: block;
+    width: 100%;
+    font-size: 18px;
+    font-weight: 100;
+    color: #444;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(225, 225, 226, 0.8);
+    text-align: center;   
+}
+
+#aside ul{  /*estilos al menu de aside barra lateral*/
+    list-style: none; /*para que no me ponga los puntos de la lista*/
+
+}
+
+#aside ul li{
+    padding-bottom: 20px;
+}
+
+#aside a{
+    display: block;
+    padding: 20px;
+    background: #eee;
+    color: #444;
+    text-align: center;
+    text-transform: uppercase;
+    transition: all 300ms;
+}
+
+#aside a:hover{  /*hover a elemtos de aside*/
+    background: #444;
+    color: #eee;
+}
+
+#footer{
+    display: grid;
+    grid-template-columns: 1fr 25%;
+    align-items: center;
+    justify-content: start;
+    
+    height: 120px;
+    align-items: center; /*para que nos centre verticalmente*/
+    border-top: 1px solid rgba(225, 225, 226, 0.8);
+
+}
+
+#footer .logo{
+    opacity: 0.5;
+    
+    text-align: left;
+    margin-right: 20px;
+}
+
+#footer .info{
+    
+    margin-left: 20px;
+    color: #444;
+}
+/*vamos a aplicar responsive*/
+
+@media (max-width:784px){
+    #header{
+        display: grid;
+        grid-template-columns: 100%;
+        align-items: center;
+        justify-content: center;
+        height: 140px;
+        padding-bottom: 20px;
+    }
+
+    #header h1{
+        text-align: center;
+    }
+
+    #content{
+        display: grid;
+        grid-template-columns: 1fr; /*para que se quede todo en una columna*/
+        align-items: start;
+        justify-items: space-between;
+        grid-column-gap: auto;
+  
+    }
+    
+    #proyects{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+        margin-left: 10px;
+        margin-right: 10px;        
+    }
+    .proyect{
+        margin-left: 10px;
+        margin-right: 10px
+    }
+
+    #aside{    /*barra lateral  responsive*/
+        margin-right: 0px;
+        padding: 15px;
+    }
+
+    #aside ul{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 10px;
+    }
+
+    #footer{   /*aqui adaptamos el footer a responsive*/
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-content: center;
+        text-align: center !important;  
+    }
+
+    #footer .logo{
+        text-align: center !important;
+    }
+}

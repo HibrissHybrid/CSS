@@ -1,0 +1,49 @@
+*{      /*asterisco para selecionar todos los elementos*/
+    margin: 0px;
+    padding: 0px;
+
+}
+
+body{
+    padding: 40px;
+}
+
+
+.caja{  
+    
+    display: block;  /*si yo quiero posicionarlo para que los elementos se comporten como cajas*/
+    /**/  /*como crear una caja web*/
+    width: 250px;  /*anchura de la caja se puede poner en px o en % */
+    height: 250px;   /*altura de la caja */
+    background-color: tomato;  /*color de la caja*/
+    border: 5px solid black;   /*bordes para la caja*/
+   /*margen de la caja*/
+    margin: 15px;  /*margen general de la caja*/
+    margin-top: 15px;  /*margen de arriba */
+    margin-bottom: 15px; /*margen de abajo de la caja*/
+    margin-left: 15px; /*margen de izquierda de la caja*/
+    margin-right: 15px; /*margen derecho de la caja*/
+    padding: 20px;   /*margen interno de la caja*/ 
+     /*se puede agregar margen al padding de sus orillas al igual que margin top, botton, left, right */
+
+     float: left;    /*mover un elemento moverlo a la der o izq*/
+
+}
+
+#cajas{
+    max-width: 1035px;
+    border: 1px solid black;
+
+}
+
+.caja p{
+    text-align: center;     /*editar el texto dentreo de la caja*/ 
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 235px;
+}
+
+.clearfix{
+    float: none;
+    clear: both;
+}

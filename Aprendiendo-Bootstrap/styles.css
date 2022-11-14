@@ -1,0 +1,33 @@
+#menu{
+    height: 50px;
+}
+
+#menu ul{  /*estilo al menu*/
+    text-decoration: none;
+    list-style: none;
+    line-height: 50px;
+}
+
+.item{   /*altura a mia items*/
+    height: 150px;
+}
+
+footer{  /*style of my footer / pie de pagina*/
+    height: 50px;
+    line-height: 50px;
+}
+
+.lateral{ 
+    height: 250px;  /*aqui hago mas grande mi caja principal de barra lateral*/
+}
+
+.lateral > div{ /*aqui hago mas grande mis elementos de mi barra lateral*/
+    height: calc(250px / 3);
+}
+
+@media(max-width: 768px){
+    #menu{
+        height: auto;
+    }
+
+}

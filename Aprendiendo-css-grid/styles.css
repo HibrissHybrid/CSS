@@ -1,0 +1,269 @@
+body{
+    font-family: sans-serif;
+    text-align: center;  /*aqui me alinea todo cental*/
+}
+
+/*----------------------WEBSITE AREAS--------------------------*/
+#website-area *{
+    margin: 0px;
+    padding: 0px;
+}
+
+#website-area{
+    display: grid; /*me idenetifique como grid*/
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 20% 10% 60% 10%;
+
+    /*aaqui aprenderemos a maquetar usando GRID AREAS*/
+    grid-template-areas: 
+        "cabecera cabecera cabecera cabecera cabecera"
+        "menu menu menu menu menu"
+        "contenido contenido contenido contenido lateral"
+        "pie pie pie pie pie"; /*aqui podemos ordenar nuestra websites por sus areas*/
+     
+    grid-gap: 20px; /*le da un margen (alrededor) a todas las cajas*/
+    /*grid-column-gap: ;  grid-row-gap: ;  le mete margenes ya sea a suolumas/columns o renglones/row*/
+    
+    width: 75%;
+    height: 1000px;  /*size vh ViewportHeight toda la pantalla del nav*/
+    margin: 0px auto;
+    border: 1px solid #ccc;
+}
+
+#website-area #cabecera{
+    grid-area: cabecera; /*area de cabecera*/
+
+    display: flex;  /*aqui centramos el contenido de la cabecera al centro*/
+    justify-content: center;  /*lo centra vertical y horizonalmente*/
+    align-items: center;
+
+    grid-column: 1 /6;
+
+    background: blue;
+    color: white;
+}
+
+#website-area #menu{
+    grid-area: menu;
+
+    background: lightblue;
+    color: black;
+
+    line-height: 70px;
+}
+
+#website-area #menu ul{
+
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    list-style: none;
+}
+
+#website-area #contenido{
+    grid-area: contenido;
+    
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 25px;
+    padding: 20px;
+
+    background: #eee;
+}
+
+#website-area #contenido article{
+    
+    background: #ccc;
+    border: 1px solid black;
+}
+
+#website-area #lateral{
+    grid-area: lateral;
+    
+
+    background: orange;
+    color: white;
+}
+
+#website-area #pie-pagina{
+    grid-area: pie;
+    
+
+    background: black;
+    color: white;
+}
+
+
+/*----------------------EJERCICIO COMPLETO--------------------------*/
+#website *{
+    margin: 0px;
+    padding: 0px;
+}
+
+#website{
+    display: grid; /*me idenetifique como grid*/
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 20% 10% 60% 10%;
+
+    width: 75%;
+    height: 1000px;  /*size vh ViewportHeight toda la pantalla del nav*/
+    margin: 0px auto;
+    border: 1px solid #ccc;
+}
+
+#website #cabecera{
+    display: flex;  /*aqui centramos el contenido de la cabecera al centro*/
+    justify-content: center;  /*lo centra vertical y horizonalmente*/
+    align-items: center;
+
+    grid-column: 1 /6;
+
+    background: blue;
+    color: white;
+}
+
+#website #menu{
+    grid-column: 1 /6;
+
+    background: lightblue;
+    color: black;
+
+    line-height: 70px;
+}
+
+#website #menu ul{
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    list-style: none;
+}
+
+#website #contenido{
+    grid-column: 1 / 5;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 25px;
+    padding: 20px;
+
+    background: #eee;
+}
+
+#website #contenido article{
+    
+    background: #ccc;
+    border: 1px solid black;
+}
+
+#website #lateral{
+    grid-column: 5 / 6;
+
+    background: orange;
+    color: white;
+}
+
+#website #pie-pagina{
+    grid-column: 1 / 6;
+
+    background: black;
+    color: white;
+}
+
+/*----------------------APRENDIDO EN GRID--------------------------*/
+.layout{
+    /*definir el ancho de la caja*/
+    width: 80%;
+    min-height: 600px;
+    margin: 0px auto; /*para centrar esta caja del layout en general*/
+
+    /*definir el grid contenedor layot */
+    display: grid;
+
+    /*aqui creo columnas*/
+    /*grid-template-columns: 25% 25% 25% 25%; cuatro columnas de 25% c/u */
+
+    /*grid-template-columns: repeat(4, 25%); con repeat podemos crear (#columas #siza)*/
+    
+    /*con esta etiqueta creamos fraciones para nuestro elemento*/
+    /* grid-template-columns: 1fr 1fr 1fr 1fr; */ /*cuatro columnas de 1fraccion*/
+
+    /* grid-template-columns: repeat(2 ,1fr); dos columnas de una fraccion*/
+
+    grid-template-columns: repeat(3, 1fr);
+    /*end class*/
+
+    /*aqui creamos filas rows*/
+    grid-template-rows: repeat(2, 1fr) 3fr repeat(2, 1fr);
+
+
+    grid-gap: 10px; /*espacio entre elementos grid*/
+    
+    padding: 10px;  /*para que me separe los elementos de los bordes*/
+
+    border: 3px solid orangered;  /*layout es mi primer div*/
+}
+
+.layout .caja{  /*aqui le damos estilo a contenido layout y cajas box*/
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    padding: 20px;
+    border: 4px solid #222;
+    background: gray;
+}
+
+/*Grid solo va a actuar en un solo div (layout) donde se indique y no en el 
+resto de la padina..
+ ya sea en columnas, filas, areas en concreto que vayamos haciendo*/
+
+/*cajas de colores respectivod*/
+.layout .red{
+    /*aqui expandimos columnas*/
+    grid-column-start: 1;
+    grid-column-end: 4;
+
+    /*tambien se puede hacer de esta forma: grid-column: 1 / 4;  indicando en donde inicia y termina */
+    
+
+
+    background: red;
+}
+
+.layout .green{
+    /*aqui vamos a expandir renglones*/
+    grid-row-start: 2;
+    grid-row-end: 6;
+    /*grid-row: 2 / 6; tambien puede hacerse4 de esta forma*/
+
+    background: green;
+}
+
+.layout .blue{
+
+    grid-column: 2 / 4; /*aqui indico la expancion de mi caja azul*/
+    background: blue;
+}
+
+.layout .pink{
+    grid-column: 2 / 3;
+
+    grid-row: 3 / 5;
+    background: pink;
+}
+
+.layout .orange{
+    grid-row: 3 / 5;
+    background: orange;
+}
+
+.layout .lightblue{
+    grid-column-start: 2;
+    grid-column-end: 4;
+
+    background: lightblue;
+}
+
+@media (max-width: 500px){
+    .layout .caja{
+        padding: 0px auto;
+    }
+}

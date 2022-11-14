@@ -1,0 +1,63 @@
+#boton{
+
+    display: block;
+    padding: 20px;
+    background-color: green;
+    color: white;
+    width: 200px;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    border: 5px solid green;   /*puedo poner la transicion en segundos (s) o milissegundos (ms)*/
+   /* transition: all 3s;  /*aqui estoy aplicando una transicion que me toma todo(all) el elemento y me hace una transicion de estilo en 500ms*/
+
+   transition: border 500ms, background 3s, border-radius 1s;
+   /*de esta manera podemos crear animaciones para las transiciones indicando el estilo que desiemos*/
+}
+
+#boton:hover{  /*me cambia los estilos del boton al pasar con el cursor por encima*/
+
+    border-radius: 15px;
+    background: orangered;
+    border: 5px red;
+}
+
+#caja{
+    margin-top: 25px;
+    width: 250px;
+    height: 250px;
+    background: lightseagreen;
+    color: white;
+    border: 5px solid black;
+    font-size: 20px;
+    text-align: center;
+    line-height: 200px;
+    animation-name: desplazamiento; /*esto agrega mi animacion a la caja*/
+    animation-duration: 10s;  /*duracion de la animacion*/  
+    animation-iteration-count: infinite; /*interaccion cuenta en este caso es infinita*/
+    animation-timing-function: linear;   /*tiempo en funcion de la animacion*/
+}
+
+@keyframes desplazamiento{
+    0%{       /*aqui indicamos donde empieza la animacion*/
+        margin-left: 0px;
+        transform:rotate(0deg);
+    }
+    50%{       /*50% de la animacion mitad del tiempo indicado*/
+        margin-left: 1200px;
+        transform:rotate(360deg);
+        border-radius: 999px; /*aqui convertimos la animacion en una bola*/
+    }
+    75%{    /*al 75% del camino me va a cambiar el color a rojo*/
+        background: red;
+    }
+    80%{   
+        border: 10px dashed blue;
+    }
+    100%{
+        margin-left: 0px;
+        transform:rotate(0deg);
+    }
+
+}

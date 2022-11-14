@@ -1,0 +1,447 @@
+/*FUENTES*/
+@font-face{
+    font-family: "nevis";
+    src: url("fonts/nevis.eot");
+    src: url("fonts/nevis.eot?#iefix") format("embedded-opentype"),
+    url("fonts/nevis.woff") format("woff"),
+    url("fonts/nevis.ttf") format("truetype"),
+    url("fonts/nevis.svg") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: "fajala";
+    src: url("fonts/FjallaOne-Regular.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: "icons";
+    src: url("fonts/websymbols-regular-webfont.svg#WebSymbolsRegular") format('svg'),
+    url("fonts/websymbols-regular-webfont.eot");
+    src: url("fonts/websymbols-regular-webfont.eot?#iefix") format("embedded-opentype"),
+    url("fonts/websymbols-regular-webfont.woff") format("woff"),
+    url("fonts/websymbols-regular-webfont.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+/*Estilos Generales*/
+*{
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    background-image: url("img/paven.png");
+}
+
+a{    /*aqui les doy estilos a los enlaces de la barra lateral*/
+    color: #529125;
+    text-decoration: none;
+}
+
+a:visited{
+    color: #529125;
+}
+
+a:hover{
+    color: #285616;
+}
+
+.red{   /*aqui le agregamos color a elementos de la barra lateral en particular*/
+
+    color: #9b2422 !important;
+}
+
+.blue{
+     color: #0c73f2  !important;
+}
+
+.orenge{
+    color: #d69d2a!important;
+}
+
+.icon{
+    font-family: "icons";
+    float: left;
+    margin-right: 5px;
+    margin-top: -2px;
+}
+
+.clearfix{
+    float: none;
+    clear: both;
+}
+
+     /*FORMULARIOS*/
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select{
+    border: 1px solid #c9c9c9;
+    box-shadow: 0px 0px 2px #ccc inset;
+    background: white;
+    padding: 1px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    color: gray;
+    transition: all 300ms;
+    
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+select :focus{
+
+    border: 1px solid #70b231;
+    color: black;
+}
+
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+button{
+
+    display: block;
+    border-radius: 2px;
+    border: 1px solid green;
+    width: 60px;
+    padding: 3px;
+    color: white;
+    background-color: #70b231;
+    cursor: pointer; /*cuando paso por encima el cursor se ponga en modo de que va a pulsar*/
+    
+}
+
+input[type="button"]:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+button:hover{
+
+   box-shadow: 0px 0px 2px gray;   /*esto ilumina el boton*/
+}
+
+
+input[type="button"]:active,
+input[type="submit"]:active,
+input[type="reset"]:active,
+button:active{
+
+   box-shadow: 0px 0px 3px gray inset;
+   text-shadow: 0px 0px 1px #ccc; 
+}
+
+/*CABECERA*/
+#header{
+
+    min-width: 1024px; /*ancho de la cabecera*/
+    width: 100%;  /*ancho del 100%*/
+    height: 250px;
+    margin: 0px auto;
+}
+
+#header a{
+
+    text-decoration: none;  /*la utiliza para quitarle el hipervinculo*/
+
+}
+
+#header #logotipo{
+
+    width: 770px; /*tama;o de la imagen*/
+    margin: 0px auto;  /*esto me va a centrar la imagen de la cabecera*/
+    padding-top: 20px; /*margen interno de arriba*/
+
+}
+
+#header #logotipo img{
+    display: block;  /*se compiorte como un bloque*/
+    text-align: center; /*imagencentrada*/
+    margin: 0px auto; /*centre esa imagen*/
+    width: 140px; /*medida del ancho de la imagen del encabezado*/
+
+}
+
+#header h1{
+
+    text-align: center;   /*Aqui aliniamos centrado*/
+    font-size: 40px;
+    font-family: "nevis";
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-top: 10px;
+    text-shadow: 0px 2px 1px #333333; /*sombreado al encabezado*/
+    transition: all 300ms;
+
+}
+
+#header h1:hover{
+
+    text-shadow: 0px 2px 1px #333333,  0px 0px 4px  #70b231; /*sombreado al encabezado*/
+}
+
+#header h1 a{  /*el encabezado va dentro de la etiqueta a*/
+
+    color: #70b231; /*color de logotipo*/
+}
+
+/*BARRA DE NAVEGACION*/
+
+#nav{
+    width: 100%; /*tama;o de la cinta a lo ancho del nav*/
+    height: 40px;
+    background-color: #333333;
+    color: white;
+    font-family: sans-serif, Helvetica, sans-serif;
+    font-size: 14px;
+    box-shadow: 0px 0px 2px gray;
+}
+
+#nav ul{
+    list-style: none;
+    text-decoration: none;
+    margin: 0px auto;
+    width: 1090px;
+}
+
+#nav > ul > li{  /*elemento hijos para dar estilos a li que es el menu*/
+      line-height: 40px;  /*para que se se centren verticalmente*/
+      float: left;  /*para separar un elemento uno de lado del otro*/
+      border-right: 1px solid gray; /*un borde que separa cada elemento*/
+      transition: all 300ms; /*se hace una transicion al pasar el cursor*/
+}
+
+#nav > ul > li a{  
+    display: block;  /*para manipularlo a mi manera*/  
+    padding-left: 20px;  /*aqui reparamos los espacios entre cada elemento del menu*/
+    padding-right: 20px;
+    color: white;
+    text-decoration: none;
+}
+#nav > ul > li > a:first-child{   /*aqui marcamos un borde a la izquiera del primer elemento de mi nav*/
+
+    border-left: 1px solid gray;
+
+}  
+
+/*ESTILOS DE LA BARRA DE NAVEGACION*/
+
+#nav > ul > li:hover{
+
+    background-color: #70b231;
+    box-shadow: opx 0px 4px green inset;
+
+}
+
+/*MENU DESPLEGABLE*/
+
+#nav > ul > li > ul {
+    display: none;
+    position: absolute;
+    color: white;
+    text-align: left;
+    width: 160px;
+    box-shadow: 0px 2px 2px gray;
+    z-index: 1;  /*destaque nde cualquier elemento*/
+}
+
+#nav > ul > li:hover > ul{    /*/aqui esto nos muestra la sub caja al pasar el raton encima*/
+    display: block;
+}
+
+
+#nav > ul > li:hover > ul > li{
+
+   background-color: #f2f1ff;
+   border-bottom: 1px solid #d6d6d6;
+   padding: 8px;  /*Separacion de los elementos*/
+   line-height: 25px;  /*es para que me lo centre verticalmente*/
+   font-size: 13px; /*para que este un poco mas chico que el elemento del menu*/
+   transition: all 300ms;  /*agrega uns transicion a las cajas del sub menu*/
+}
+
+
+#nav > ul > li:hover > ul > li a{  /*aqui vamos a modificar el texto del sub menu*/
+
+    color: #666666;       /*aqui nos muestra elementos de la etiqueta porque ya tiene color*/
+ }
+
+ #nav > ul > li:hover > ul > li:hover{  /*aqui damos estilo a la caja de submenu*/
+
+    /*  box-shadow: 0px 0px 6px #ccc inset;  /*aqui le agregamos un sombreado a la caja del sub menu*/
+    background-color: rgb(214, 210, 210);  /*lo mismo pero en background*/
+}
+ 
+/*CONTENIDO*/
+
+#content{
+    width: 1250px;
+    min-height: 1100;
+    margin: 0px auto;
+}
+
+/*CONTENIDO*/
+
+#aside, #frase {  
+    
+    width: 200px; /*la anchura de la caja lateral*/
+    float: left;  /*esto es para que lo flote a la izquierda*/
+    margin: 30px;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0px 2px 2px #ccc;
+    font-family: sans-serif Arial, Helvetica;
+}
+
+#frase{
+   /* clear: both; aqui me acomoda mis dos cajas debajo en la barra lateral para que no me los flote a la derecha*/
+    width: 180px;
+    padding: 10px;
+    font-size: 14px;
+    font-family: sans-serif;
+}
+
+#aside .widget{
+
+    display: block;
+    width: 180px;
+    margin: 5px auto;
+    padding: 8px;  /*Separador*/
+    padding-left: 10px; /*margen interior por la izquierda*/
+    padding-right: 10px; /*margen interior por la derecha*/
+    font-size: 14px; /*tama;o de la fuente*/
+    border-bottom: 1px dashed #333333; /*borde dashed abajo*/
+}
+
+#aside .widget:first-child{
+
+    margin-bottom: 20px;
+}
+
+/*estilos de los elementos de la barra lateral*/
+
+#aside h3{
+
+    display: block;
+    width: 100%;
+    color: #333333;
+    text-align: center;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin-bottom: 15px;
+    background: #f2f3f2;
+    border: 1px solid #ccc;
+    border-left: none;
+    border-right: none;
+
+}
+
+#aside li{
+    margin-top: 8px;
+    margin-bottom: 5px;
+    margin-left: 20px;
+    list-style: square;
+}
+
+/*FORMULARIOS BARRA LATERAL*/
+#aside div label,
+#aside div input[type="text"],
+#aside div input[type="email"],
+#aside div input[type="password"],
+#aside div a{
+
+      display: block;
+      width: 95%;  /*aqui modificamos la anchura del la etiqueta label*/
+      margin-top: 2px; /*margen de arriba para la separacion de los elementos de la barra lateral*/
+      margin-bottom: 2px;
+}
+
+#aside div input[type="button"],
+#aside div input[type="submit"],
+#aside div button{
+    margin-top: 5px;
+    margin-bottom: 10px;
+
+}
+
+#aside input,
+#aside label{
+    margin: 0px auto;
+    text-align: center;  /*aqui esto me esta centrando mi input y label del la barra lateral*/
+}
+
+/*SECCIONES*/
+
+#sections{
+    float: right;
+    width: 75%;
+    font-family: sans-serif, Arial, Helvetica;
+    margin-right: 20px;
+}
+
+#sections .titulo{
+    font-family: fajala;
+    font-size: 24px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-top: -20px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    border-radius: 1px solid #ccc;
+}
+
+#sections section{
+    margin-top: 40px;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0px 0px 4px #c9c9c9;
+    color: #333333;
+    font-size: 16px;
+    overflow: hidden;
+}
+
+#sections .article{  /*margenes de los articulos del contenido*/
+    margin: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#sections .date{
+    color: gray;
+    font-size: 14px;
+}
+
+#sections .stickerOne,
+#sections .stickerTwo{
+    position: absolute;
+    margin-top: -38px;
+    z-index: 0;
+}
+
+#sections .stickerTwo{
+    margin-left: 860px;
+}
+
+#history{  /*aqui esta el enlace peque;o que esta en la esquina*/
+    float: right;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+/*PIE DE PAGINA FOOTER*/
+#footer{
+    width: 100%;
+    margin: 0px auto;
+    text-align: center;
+    margin-top: 40px;
+    background-color: #333333;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+    font-family: sans-serif;
+    font-size: 14px;
+    box-shadow: 0px 0px 2px gray;
+}

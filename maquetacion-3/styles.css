@@ -1,0 +1,271 @@
+*{
+    text-decoration: none;
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+}
+
+#container{
+    width: 90%;
+    height: auto;
+    margin: 0px auto;
+    border: 1px solid rgba(225, 225, 226, 0.8);
+    box-shadow: 0px 0px 10px #ccc;
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+    min-height: 600px;
+}
+
+#header{
+    display: flex; /*se coloca un elemento al lado del otro*/
+    flex-direction: row; /* se comporta como una fila...*/
+    flex-wrap: wrap; /*si algo se sale se ponga abajo*/
+    align-items: center; /*centra verticalmente*/
+    
+    height: 120px; 
+    border-bottom: 1px solid rgba(225, 225, 226, 0.8); /*aqui creamos un borde en la parte de abajo para crear divicion entre el header y el contenido*/
+    
+}
+
+.logo{
+    flex-grow: 1;
+    flex-basis: 65%; /*aui flotamos el menu a la izquierda */
+
+    font-family: Helvetica; /*letra*/
+    font-style: italic; /*estilo*/
+    font-weight: 900;
+    font-size: 35px; /*size font logo*/
+
+    padding: 10px; /*margen interio*/
+    margin-left: 20px; /*para que no este tan pegado al container*/
+    color: black; /*color*/
+    text-shadow: 1px 1px 0px #ccc; /*sombra al logo*/
+    text-transform: uppercase; /*aqui convierte el texto a mayusculas*/
+    
+}
+
+.logo h1{
+
+    font-family: Helvetica; /*letra*/
+    font-style: italic; /*estilo*/
+    font-weight: 900;
+    font-size: 35px; /*size font logo*/
+}
+
+#menu{  /*ajustamos menu*/
+    flex-grow: 1;
+    flex-basis: 30%;
+    height: 100%;
+    padding-right: 20px;
+}
+
+#menu > ul{  /*ajuste del menu*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;  /*por si se sale algo de la caja*/
+    align-items: center;  /*para centrar el menu*/
+    justify-content: space-between; /*hay un espacio entre cada elemento y que los elementos de los bordes esten pegados al star y end*/
+    height: 100%;
+    list-style: none;
+}
+
+#menu a{  /*aqui le damos estilos a los elementos del menu */
+    text-transform: uppercase;
+    color: #444;
+    padding: 15px;
+    transition: all 300ms;
+
+}
+
+#menu a:hover{  /*cuando pase cursor por encima de cada elemento este dara un estilo*/
+    background: #ccc;  
+    color: white;
+}
+
+/*contenido*/
+
+#content{
+    display: flex;
+    justify-content: space-between; /*un espacio entre medio de cada elemento*/
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#proyects{
+    display: flex;
+    flex-flow: row wrap; /*todo al lado y cuando supere el tamano se salte a abajo*/
+    justify-content: space-between;
+    flex-basis: 80%;  /*encaje mejor respecto a size*/
+   
+    
+}
+
+.proyect{
+    flex-grow: 1;  /*en caso de que se necesite ajustar*/
+    flex-basis: 250px;
+    margin-bottom: 25px;
+    margin-right: 20px; /*para que se separe cada elemento*/
+    border: 1px solid #ccc;
+}
+
+.proyect img{
+    width: 100%;
+}
+
+.proyect-info a{
+    font-size: 16px;
+    color: black;
+    transition: all 300ms;
+
+}
+
+.proyect-info a:hover{
+    color: green;
+}
+
+.proyect-info p{
+    font-size: 16px;
+    color: gray;
+}
+
+/*barra lateral*/
+#aside{
+    flex-basis: 15%;
+    margin-right: 30px;
+    padding: 15px;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+#aside h2{  /*estilos a los eslementos del aside (barra lateral)*/
+    display: block;
+    width: 100%;
+    font-size: 18px;
+    font-weight: 100;
+    color: #444;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(225, 225, 226, 0.8);
+    text-align: center;   
+}
+
+#aside ul{  /*estilos al menu de aside barra lateral*/
+    list-style: none; /*para que no me ponga los puntos de la lista*/
+
+}
+
+#aside ul li{
+    padding-bottom: 20px;
+}
+
+#aside a{
+    display: block;
+    padding: 20px;
+    background: #eee;
+    color: #444;
+    text-align: center;
+    text-transform: uppercase;
+    transition: all 300ms;
+}
+
+#aside a:hover{  /*hover a elemtos de aside*/
+    background: #444;
+    color: #eee;
+}
+
+#footer{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end; 
+    height: 120px;
+    align-items: center; /*para que nos centre verticalmente*/
+    border-top: 1px solid rgba(225, 225, 226, 0.8);
+
+}
+
+#footer .logo{
+    opacity: 0.5;
+    flex-basis: auto;
+    flex-grow: 1;
+    order: 2;
+    text-align: right;
+    margin-right: 20px;
+}
+
+#footer .info{
+    flex-grow: 1; /*para que compartan el mismo espacio*/
+    order: 1;
+    margin-left: 20px;
+    color: #444;
+}
+
+@media (max-width: 1335px){  /*aqui vamos a aplicar responsive con media queris*/
+    #header{
+        text-align: center;
+    }
+    
+    #menu > ul {
+        margin-top: 20px;
+        align-items: flex-start;
+        justify-content: space-evenly;
+    }
+}
+
+
+
+@media (max-width: 646px){
+  
+    
+    #content{
+        display: flex;
+        flex-direction: column;  /*para que se comporte como una columna*/
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    #aside{
+        margin-right: 0px;
+    }
+
+    #aside ul{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between; /*adapta al tamano el menu en responsive*/
+    }
+
+    #aside ul li{  /*hacer mas flexible mis elementos en este caso mi menu*/
+        flex-grow: 1;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .proyect{
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+
+    #footer .logo {
+        flex-grow: 1;
+        order: 1;
+        flex-basis: 100%;
+        text-align: center;
+        margin: 0px;
+        
+    }
+
+    #footer .info {
+        flex-grow: 1;
+        order: 2;
+        margin-left: 20px;
+        color: #444;
+        flex-basis: 100%;
+        text-align: center;
+        margin: 0px;
+    }
+}
